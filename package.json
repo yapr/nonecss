@@ -1,0 +1,25 @@
+{
+  "name": "nonecss",
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/none.min.css",
+  "scripts": {
+    "build": "tailwindcss -i ./src/none.css -o ./dist/none.min.css --minify",
+    "dev": "tailwindcss -i ./src/none.css -o ./dist/none.css --watch",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "prepublishOnly": "npm run build",
+    "check:build": "node ./scripts/check-build.js",
+    "test:a11y": "node ./scripts/a11y-check.js",
+    "ci": "npm run lint:css && npm run build && npm run check:build && npm run test:a11y"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "axe-playwright": "^3.0.0",
+    "http-server": "^14.1.1",
+    "postcss": "^8.0.0",
+    "playwright": "^1.40.0",
+    "stylelint": "^15.0.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "license": "MIT"
+}

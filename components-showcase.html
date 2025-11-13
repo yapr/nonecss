@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>none.css - Components Showcase</title>
+  <link rel="stylesheet" href="./dist/none.min.css" />
+  <style>
+    body { padding: 2rem; background: var(--nc-bg, #fff); color: var(--nc-text, #0f172a); }
+    header { margin-bottom: 2rem; }
+    .section { margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+  <header>
+    <h1>none.css - Components Showcase</h1>
+    <p>このページは全コンポーネントのビルドチェック & visual/accessibility 確認用です。</p>
+  </header>
+
+  <main id="main">
+    <!-- Classless element examples -->
+    <section class="section" id="elements">
+      <h2>Element defaults</h2>
+      <p>段落テキストはデフォルトで良い読みやすさに設定されています。<a href="#">リンク例</a></p>
+      <blockquote>Blockquote の例</blockquote>
+      <pre><code>const x = 1;</code></pre>
+      <ul><li>リスト項目 1</li><li>リスト項目 2</li></ul>
+      <table><thead><tr><th>ヘッダ</th><th>値</th></tr></thead><tbody><tr><td>A</td><td>1</td></tr></tbody></table>
+    </section>
+
+    <!-- Components -->
+    <section class="section" id="components">
+      <h2>Components (class-based)</h2>
+
+      <h3>Buttons</h3>
+      <button class="btn">Primary button</button>
+      <button class="btn" disabled aria-disabled="true">Disabled</button>
+
+      <h3>Cards</h3>
+      <div class="card" style="max-width:400px;">
+        <h4>Card Title</h4>
+        <p>カードの内容。class は .card だけでよい。</p>
+      </div>
+
+      <h3>Grid / Card grid</h3>
+      <div class="card-grid" style="margin-top:1rem;">
+        <div class="card">Item A</div>
+        <div class="card">Item B</div>
+        <div class="card">Item C</div>
+      </div>
+
+      <h3>Badge / Hero</h3>
+      <span class="badge">New</span>
+      <div class="hero" style="margin-top:1rem;">
+        <h3>Hero title</h3>
+        <p>簡単なヒーロー表示</p>
+      </div>
+    </section>
+
+    <section class="section" id="a11y">
+      <h2>Accessibility</h2>
+      <p>このページを使って build の成否、フォーカスリング、カラーコントラストを確認します。</p>
+      <p>推奨: CI でこのページをビルドして、axe-core などで自動チェックを回すと良い。</p>
+    </section>
+  </main>
+</body>
+</html>
