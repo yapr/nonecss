@@ -10,7 +10,8 @@ Quickstart
    npm install
 
 2. tailwind.config.js に preset を追加:
-   const nonePreset = require('nonecss-tailwind/src/presets/none-preset');
+   const nonePreset = require('nonecss/src/presets/none-preset');
+   // ローカルで直接利用する場合は次のパスを使用: require('./src/presets/none-preset')
    module.exports = {
      content: ['./src/**/*.{html,js,ts,jsx,tsx}', './public/**/*.html'],
      plugins: [ nonePreset({ prefix: '' }) ]
