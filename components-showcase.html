@@ -9,10 +9,26 @@
     body { padding: 2rem; background: var(--nc-bg, #fff); color: var(--nc-text, #0f172a); }
     header { margin-bottom: 2rem; }
     .section { margin-bottom: 2rem; }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 0;
+      width: auto;
+      height: auto;
+      padding: 0.5rem 1rem;
+      background: var(--nc-bg, #fff);
+      z-index: 9999;
+    }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <h1>none.css - Components Showcase</h1>
     <p>このページは全コンポーネントのビルドチェック & visual/accessibility 確認用です。</p>
@@ -35,7 +51,7 @@
 
       <h3>Buttons</h3>
       <button class="btn">Primary button</button>
-      <button class="btn" disabled aria-disabled="true">Disabled</button>
+      <button class="btn" disabled>Disabled</button>
 
       <h3>Cards</h3>
       <div class="card" style="max-width:400px;">

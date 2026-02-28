@@ -5,15 +5,20 @@
 /* Design tokens (CSS variables) with sensible defaults.
    Projects can override these at :root or via a theme wrapper. */
 :root {
+  color-scheme: light dark;
   --nc-primary: #2563eb; /* primary blue (shadcn-like) */
   --nc-primary-dark: #1d4ed8;
   --nc-bg: #ffffff;
-  --nc-surface: #ffffff;
+  --nc-surface: #f8fafc;
   --nc-text: #0f172a;
   --nc-muted: #64748b;
 }
 
-/* Expose a small mapping to Tailwind-compatible variables (optional) */
-.btn {
-  /* no-op: basic use via preset; kept here for generated CSS fallback if needed */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nc-bg: #0f172a;
+    --nc-surface: #1e293b;
+    --nc-text: #f1f5f9;
+    --nc-muted: #94a3b8;
+  }
 }
